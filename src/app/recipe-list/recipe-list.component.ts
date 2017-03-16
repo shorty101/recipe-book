@@ -8,9 +8,12 @@ import { RecipeItemComponent } from './recipe-item.component';
   templateUrl: './recipe-list.component.html'
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('Schnitzel', 'Very tasty', 'http://www.daringgourmet.com/wp-content/uploads/2014/03/Schnitzel-7_edited.jpg', []),
+    new Recipe('Sauerkraut', 'Easy to make', 'http://www.almanac.com/sites/default/files/image_nodes/how-to-make-sauerkraut.jpg', []),
+  ];
+
   @Output() recipeSelected = new EventEmitter<Recipe>();
-  recipe = new Recipe('Dummy', 'Desciption of Dummy', 'https://i.vimeocdn.com/portrait/58832_300x300');
 
   constructor() { }
 
