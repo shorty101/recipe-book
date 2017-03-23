@@ -1,18 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { Recipe } from '../recipe';
+import { Recipe } from '../../recipe';
 
 @Component({
   selector: 'rb-recipe-item',
   templateUrl: './recipe-item.component.html'
 })
-export class RecipeItemComponent implements OnInit {
+export class RecipeItemComponent {
   @Input() recipe: Recipe;
-  recipeId: number;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input() recipeId: number;
 }
